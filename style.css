@@ -1,0 +1,59 @@
+:root{
+    --primary: #e7ecf1;
+    --white: #ffffffde;
+    --black: #000000a6;
+    --monster: rgba(207, 120, 57, 0.792);
+    --syncron: silver;
+    --xyz: black;
+    --fusion: violet;
+    --link: blue;
+    --spell: green;
+    --trap: rgb(230, 21, 88);
+    --sdw-before: 2px 2px 5px 0px rgba(201,204,212,0.75);
+    --sdw-after: -2px -2px 5px 0px rgba(255,255,255,0.75);
+    --shadow : 2px 2px 5px 0px rgba(201,204,212,0.75) , -2px -2px 5px 0px rgba(255,255,255,0.75)
+
+}
+
+*{
+    box-sizing: border-box;
+    color: var(--black);
+}
+img{
+    max-width: 110%;
+    margin: -10px;
+}
+.start{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/491/491466.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: 36px; */
+    height: 16px;
+    width: 16px;
+}
+body{
+    padding: 10px;
+    background-color: var(--primary);
+    /* background-color: var(--black); */
+}
+.card{
+    padding: 3px;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--white);
+
+    margin: 5px 0px 10px 0px;
+}
+.card p{
+    padding-left: 10px;
+}
+
+ul{
+    list-style: none;
+    padding-left: 10px;
+}
+
+body.monster, .monster .card{
+    background-color: var(--monster);
+}
