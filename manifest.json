@@ -1,0 +1,25 @@
+{
+  "short_name": "yg_db",
+  "name": "Yugioh_DB",
+  "icons": [
+    {
+      "src": "AdminLTELogo.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "boxed-bg.png",
+      "type": "image/png",
+      "sizes": "400x400",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "./",
+  "background_color": "#007bff",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "./",
+  "theme_color": "#fff",
+  "crossorigin": "use-credetials"
+}

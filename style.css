@@ -20,8 +20,23 @@
     color: var(--black);
 }
 img{
-    max-width: 110%;
-    margin: -10px;
+    max-width: 50vw;    
+}
+.load{
+position:fixed;
+top: 0px;
+bottom: 0px;
+left: 0px;
+right: 0px;
+background-color: white;
+
+display:flex;
+justify-content: center;
+align-item: center;
+}
+.d-none{
+display: none !important;
+transform: scale(0);
 }
 .start{
     background-image: url(https://cdn-icons-png.flaticon.com/512/491/491466.png);
@@ -34,6 +49,8 @@ img{
 body{
     padding: 10px;
     background-color: var(--primary);
+    overflow-x: hidden;
+    /* max-width: 100%; */
     /* background-color: var(--black); */
 }
 .card{
@@ -44,6 +61,9 @@ body{
     background-color: var(--white);
 
     margin: 5px 0px 10px 0px;
+}
+.card-body{
+    padding: 10px;
 }
 .card p{
     padding-left: 10px;
@@ -56,4 +76,66 @@ ul{
 
 body.monster, .monster .card{
     background-color: var(--monster);
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.d-flex .card{
+    flex: 1 1 100%;
+}
+.d-flex_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+.img-sm{
+    max-height: 100px;
+}
+.results{
+    gap: 10px;
+}
+.results p{
+    white-space: wrap;
+}
+.title-sm{
+    display: none;
+}
+.kartu p{
+    text-align: justify;
+}
+
+@media screen and (min-width: 600px){
+    .d-flex .card{
+        flex: 1 1 20%;
+    }
+    .kartu{
+        max-width: 90%;
+        margin: auto;
+        padding: 0px;
+    }
+    .kartu .card-body{
+        display: flex;
+        gap: 10px;
+    }
+    .kartu .title{
+        display: none;
+    }
+    .kartu .title-sm{
+        display: block;
+        margin: 0px;
+        padding: 10px;
+    }
+}
+.p-0 {
+    padding: 0px !important;
+}
+.m-0{
+    margin: 0px !important;
+}
+.load img{
+width: unset;
 }

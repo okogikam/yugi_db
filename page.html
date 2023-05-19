@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body class="">
+	<div class='load d-none'><img src='./loading__.gif'></div>
+    <div class="results d-flex"></div>
+    <div class="singgle_result"></div>
+    <script src='./card.js'></script>
+    <script>
+        const results = document.querySelector(".results");
+        const one_results = document.querySelector(".singgle_result");
+        const queryString = window.location.search;
+	const load = document.querySelector(".load");
+
+        const pencarian = new URLSearchParams(queryString);
+        let urlpencarian = "https://db.ygoprodeck.com/api/v7/cardinfo.php?" + pencarian;
+
+        $.ajax({
+            url: urlpencarian,
+            dataType: 'json',
+            type: "GET",
+            beforeSend: ()=>{
+                load.classList.toggle('d-none')
+		},
+            success: (data)=>{
+                // let cardData = JSON.parse(data);
+                cards(data);
+                // console.log(data);
+		    
+			setTimeout(()=>{load.classList.toggle('d-none')},1000)
+            },
+            error: function(data) {
+                results.innerHTML = data.responseJSON.error;
+			setTimeout(()=>{load.classList.toggle('d-none')},1000)
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
