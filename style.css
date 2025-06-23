@@ -208,9 +208,9 @@ body.monster, .monster .card{
         box-shadow: var(--sdw-before);
     }
     main{
-        box-shadow: 12px 3px 18px -4px rgba(0,0,0,0.34);
-        -webkit-box-shadow: 12px 3px 18px -4px rgba(0,0,0,0.34);
-        -moz-box-shadow: 12px 3px 18px -4px rgba(0,0,0,0.34);
+        box-shadow: -3px 12px 71px -18px rgba(0,0,0,0.93);
+        -webkit-box-shadow: -3px 12px 71px -18px rgba(0,0,0,0.93);
+        -moz-box-shadow: -3px 12px 71px -18px rgba(0,0,0,0.93);
     }
     .d-flex .card{
         flex: 1 1 20%;
