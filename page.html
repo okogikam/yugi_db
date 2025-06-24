@@ -9,9 +9,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body class="">
-	<div class='load d-none'><img src='./loading__.gif'></div>
-    <div class="results d-flex"></div>
-    <div class="singgle_result"></div>
+    <header class="header">
+        <div class="top-menu">
+            <span>YougiDB</span>
+            <form action="./page.html" method="GET">
+                    <input type="text" name="fname" placeholder="Nama Kartu" required>
+                    <button class="btn-menu" type="submit">
+                        <img src="./icon/search-analytics.png" alt="">
+                    </button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class='load d-none'><img src='./loading__.gif'></div>
+         <div class="results d-flex"></div>
+        <div class="singgle_result"></div>
+    </main>
+    <footer class="footer">
+        <div class="footer-menu">
+            <button class="btn-menu">
+                <a href="" class="nav-link">
+                    <img src="./icon/home-agreement.png" alt="home">
+                </a>
+            </button>
+            <button class="btn-menu">
+                <a href="" class="nav-link">
+                    <img src="./icon/paper.png" alt="search">
+                </a>
+            </button>
+            <button class="btn-menu">
+                <a href="" class="nav-link">
+                    <img src="./icon/book.png" alt="deck">
+                </a>
+            </button>
+            <button class="btn-menu">
+                <a href="" class="nav-link">
+                    <img src="./icon//share.png" alt="share">
+                </a>
+            </button>
+            <button class="btn-menu">
+                <a href="" class="nav-link">
+                    <img src="./icon/settings.png" alt="setting">
+                </a>
+            </button>
+        </div>
+    </footer>
+	
     <script src='./card.js'></script>
     <script>
         const results = document.querySelector(".results");

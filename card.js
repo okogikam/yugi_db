@@ -9,15 +9,11 @@
                         let type = card.data[x].type || false
                         let img = card.data[x].card_images || false;
                         let div = document.createElement("div");
-                        div.classList.add("card","d-flex");
+                        div.classList.add("card");
                         div.innerHTML = `
                         <a href="?name=${name}">
-                        <img class='img-sm' src='${img[0].image_url_small}'>
+                            <img class='img-sm' src='${img[0].image_url_small}'>
                         </a>
-                        <div class='card-body p-0 m-0'>
-                            <p><a href="?name=${name}">${name}</a><br>
-                            ${type}</p>
-                        </div>
                         `;
         
                        results.append(div);
@@ -36,9 +32,12 @@
             let div = document.createElement("div");
             div.classList.add("card");
             div.classList.add("kartu");
-            div.innerHTML = `<div class='card-body'>
-            <h3 class='title'>${c.name}</h3>
-            <img src='${c.card_images[0].image_url}'>
+            div.innerHTML = `
+            <div class="card-header">            
+               <h3 class='title'>${c.name}</h3>
+            </div>
+            <div class='card-body'>
+               <img src='${c.card_images[0].image_url}'>
             <div class='card-detail'>
                 <h3 class='title-sm'>${c.name}</h3>
                 <p>Tipe: ${c.type} - Level: ${c.level} - Race: ${c.race}</p>
